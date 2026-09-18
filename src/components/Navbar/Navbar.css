@@ -1,0 +1,60 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  background-color: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar > h1 {
+  font-family: "Bebas Neue", "Montserrat", sans-serif;
+  font-size: 34px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: var(--gold);
+}
+
+.navbar_links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar_links > a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 8px 16px;
+  transition: color 0.2s ease;
+}
+
+.navbar_links > a::after {
+  content: "";
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 6px;
+  height: 2px;
+  background-color: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s ease;
+}
+
+.navbar_links > a:hover {
+  color: var(--text);
+}
+
+.navbar_links > a:hover::after {
+  transform: scaleX(1);
+}
+
+.navbar_links > a:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
